@@ -52,7 +52,8 @@ export default function DashboardPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <Card>
+              {/* recovery status */}
+                <Card>
                 <CardHeader className="pb-2">
                   <CardTitle className="text-lg flex items-center gap-2">
                     <Activity className="h-5 w-5 text-primary" />
@@ -72,7 +73,7 @@ export default function DashboardPage() {
                   </div>
                 </CardContent>
               </Card>
-
+              {/* health metrics */}
               <Card>
                 <CardHeader className="pb-2">
                   <CardTitle className="text-lg flex items-center gap-2">
