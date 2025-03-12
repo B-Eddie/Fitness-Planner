@@ -1,0 +1,16 @@
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes core-beam-pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+@keyframes particle-rise {
+  0% { transform: translateY(100%) translateX(-50%); }
+  100% { transform: translateY(-100%) translateX(-50%); }
+}
+
+/* Add other animation keyframes that you're using in your component */ 

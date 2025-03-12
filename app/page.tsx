@@ -238,23 +238,24 @@ export default function WelcomePage() {
           <div className="container relative px-6 md:px-8">
             <div className="max-w-5xl mx-auto text-center">
               <div className="relative">
-                <h1 
-                  data-aos="fade-up"
+              <h1 
+                data-aos="fade-up"
                   className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 bg-gradient-to-r from-blue-400 via-cyan-300 to-teal-400 bg-clip-text text-transparent leading-tight pb-2"
                   style={{
                     textShadow: '0 0 40px rgba(56, 189, 248, 0.2)'
                   }}
-                >
-                  The Only AI That Knows Your Next Move.
-                </h1>
+              >
+                  The Future of Fitness. Here. Now.
+              </h1>
                 <div className="absolute -inset-x-10 top-1/2 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent blur-sm"></div>
               </div>
+              <br></br>
               <p 
                 data-aos="fade-up"
                 data-aos-delay="100"
                 className="text-xl md:text-2xl text-cyan-200/80 mb-12 max-w-3xl mx-auto font-light"
               >
-                AI-driven workouts that adapt in real time to your strength, recovery, and goals. Personalized fitness, optimized instantly.
+                Meet the world’s smartest fitness coach in your pocket—tailoring every workout to your body, goals, strength, and recovery. Achieve results 3× faster at 20× less cost than any human trainer. Personalized fitness, optimized instantly.
               </p>
               <div 
                 data-aos="fade-up"
