@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import './globals.css'
 
 export default function WelcomePage() {
   useEffect(() => {
@@ -57,16 +58,16 @@ export default function WelcomePage() {
             <div className="max-w-4xl mx-auto text-center">
               <h1 
                 data-aos="fade-up"
-                className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#0d98d9] via-[#0d98d9]/80 to-[#0d98d9]/60 bg-clip-text text-transparent leading-tight pb-2"
+                className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 bg-gradient-to-r from-[#0d98d9] via-[#0d98d9]/80 to-[#0d98d9]/60 bg-clip-text text-transparent leading-tight pb-2"
               >
                 The Only AI That Knows Your Next Move.
               </h1>
               <p 
                 data-aos="fade-up"
                 data-aos-delay="100"
-                className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto"
+                className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto"
               >
-                An intelligent fitness app that designs real-time adaptive workouts, uniquely tailored to your biometrics, goals, and daily life. Seamlessly synced, effortlessly personalized.
+                AI-driven workouts that adapt in real time to your strength, recovery, and goals. Personalized fitness, optimized instantly.
               </p>
               <div 
                 data-aos="fade-up"
