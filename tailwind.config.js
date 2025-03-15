@@ -1,15 +1,13 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors')
-
 module.exports = {
-  darkMode: 'class',
+  darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-    "*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
   ],
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -20,50 +18,49 @@ module.exports = {
     },
     extend: {
       colors: {
-        // Main background colors
-        background: '#0A0A0B',
-        foreground: '#FFFFFF',
-        
-        // Primary colors
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: '#0d98d9', // New blue color
-          foreground: '#000000',
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
-        
-        // Secondary/muted colors
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
         muted: {
-          DEFAULT: '#1A1A1F',
-          foreground: '#A1A1AA',
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
-        
-        // Accent colors
         accent: {
-          DEFAULT: '#1C1C22',
-          foreground: '#FFFFFF',
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
-        
-        // Card colors
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
         card: {
-          DEFAULT: '#18181B',
-          foreground: '#FFFFFF',
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
         },
-        
-        // Border colors
-        border: '#27272A',
-        
-        // Input colors
-        input: '#27272A',
-        
-        // Ring color for focus states
-        ring: '#00F0FF',
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-glass': 'linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01))',
       },
       boxShadow: {
-        'neon': '0 0 20px rgba(13, 152, 217, 0.15)', // Updated to match new blue
-        'inner-light': 'inset 0 1px 0 0 rgba(255, 255, 255, 0.05)',
+        'glow-blue': '0 0 15px 3px rgba(59, 130, 246, 0.5)',
+        'glow-blue-sm': '0 0 10px 1px rgba(59, 130, 246, 0.4)',
+        'glow-blue-lg': '0 0 25px 5px rgba(59, 130, 246, 0.6)',
+        'glow-white': '0 0 10px 2px rgba(255, 255, 255, 0.3)',
+      },
+      backgroundImage: {
+        'gradient-dark': 'radial-gradient(circle at center, hsl(222, 47%, 10%), hsl(222, 47%, 5%))',
+        'gradient-glass': 'linear-gradient(135deg, hsla(222, 47%, 15%, 0.5), hsla(222, 47%, 8%, 0.5))',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -72,38 +69,27 @@ module.exports = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: 0 },
+          from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
+          to: { height: "0" },
         },
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+        "pulse-glow": {
+          '0%, 100%': { opacity: 0.8, transform: 'scale(1)' },
+          '50%': { opacity: 1, transform: 'scale(1.05)' },
         },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-        slideUpAndFade: {
-          '0%': { 
-            opacity: '0',
-            transform: 'translateY(20px)'
-          },
-          '100%': { 
-            opacity: '1',
-            transform: 'translateY(0)'
-          },
-        },
+        "float": {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        'fadeIn': 'fadeIn 1s ease-in',
-        'slideUp': 'slideUp 0.5s ease-out',
-        'slideUpAndFade': 'slideUpAndFade 0.8s ease-out forwards',
+        "pulse-glow": "pulse-glow 3s infinite ease-in-out",
+        "float": "float 6s infinite ease-in-out",
       },
     },
   },
